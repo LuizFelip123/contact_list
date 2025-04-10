@@ -7,14 +7,27 @@
     
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <%if !user_signed_in?%>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Nova Conta</a>
+          <%= link_to 'Nova Conta', new_user_path, class: 'nav-link'%>
         </li>
+        <%end%>
       </ul>
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <%= link_to 'Entrar', '#', class: 'nav-link' %>
-        </li>
+ <% if !user_signed_in? %> 
+  <li class="nav-item">
+    <%= link_to 'Entrar', entrar_path, class: 'nav-link' %>
+  </li>
+<% else %>
+  <li class="nav-item dwn">
+    <a class="nav-link">
+      Bem-vindo, <%= current_user.name %>
+    </a>
+  </li>
+      <li class="nav-item"><%= link_to 'Minha Página', user_path(current_user) , class:'nav-link' %></li>
+         <li class="nav-item"><%= link_to 'Contatos', contacts_path, class:'nav-link' %></li>
+      <li class="nav-item"> <%= button_to "Sair",sair_path ,method: :delete, class:'nav-link' %></li>
+<% end %>
       </ul>
     </div>
   </div>

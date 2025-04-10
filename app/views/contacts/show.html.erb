@@ -1,0 +1,17 @@
+<% if notice %>
+  <div class="alert alert-success">
+    <%= notice %>
+  </div>
+<% end %>
+
+<div class="card mb-3">
+  <div class="card-body">
+    <%= render @contact %>
+  </div>
+</div>
+
+<div class="d-flex gap-2">
+  <%= link_to "Editar contato", edit_contact_path(@contact), class: "btn btn-outline-primary" %>
+  <%= link_to "Voltar para contatos", contacts_path, class: "btn btn-outline-secondary" %>
+  <%= button_to "Excluir contato", @contact, method: :delete, data: { confirm: "Tem certeza?" }, class: "btn btn-outline-danger" %>
+</div>

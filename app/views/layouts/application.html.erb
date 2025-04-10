@@ -26,6 +26,12 @@
   <body>
   <%= render 'layouts/header'%>
   <div class="container">
+  <% flash.each do |message_type, message| %>
+      <%= content_tag 'div', class:"alert alert-#{message_type} alert-dismissible fade show  justify-content-between align-items-center", role:'alert' do %>
+           <span><%= message %> </span>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <%end%>
+  <%end%>
     <%= yield %>
       <%= render'layouts/footer'%>
   </div>
