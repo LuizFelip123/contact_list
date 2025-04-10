@@ -1,24 +1,36 @@
-# README
+# 📇 Contact List
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aplicação web desenvolvida com **Ruby on Rails** para gerenciar uma lista de contatos com nome e telefone. Suporta operações de **CRUD**, autenticação de usuários e interface responsiva com **Bootstrap 5**.
 
-Things you may want to cover:
+---
 
-* Ruby version
+## 🚀 Tecnologias Utilizadas
 
-* System dependencies
+- Ruby 3.x
+- Rails 7.x
+- PostgreSQL ou SQLite (desenvolvimento)
+- Bootstrap 5 (via importmap)
+- Hotwire (Turbo + Stimulus)
+- Importmap-Rails
 
-* Configuration
+---
 
-* Database creation
+## ✅ Funcionalidades
 
-* Database initialization
+- Cadastro e login de usuários
+- CRUD de contatos (nome e telefone)
+- Validações com exibição de erros
+- Feedback com flash messages (Bootstrap alerts)
+- Layout responsivo com Bootstrap 5
+- Menu dinâmico de acordo com o login do usuário
 
-* How to run the test suite
+---
 
-* Services (job queues, cache servers, search engines, etc.)
+## 🔧 Instalação
 
-* Deployment instructions
+Clone o repositório e instale as dependências:
 
-* ...
+```bash
+git clone https://github.com/seu-usuario/contact_list.git
+cd contact_list
+bundle install
