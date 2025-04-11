@@ -31,6 +31,6 @@ Aplicação web desenvolvida com **Ruby on Rails** para gerenciar uma lista de c
 Clone o repositório e instale as dependências:
 
 ```bash
-git clone https://github.com/seu-usuario/contact_list.git
+git clone https://github.com/LuizFelip123/contact_list.git
 cd contact_list
 bundle install
